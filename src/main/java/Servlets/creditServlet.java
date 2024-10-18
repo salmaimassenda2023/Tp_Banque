@@ -9,7 +9,6 @@ import Metier.ICreditMetier;
 import Metier.creditMetier;
 import Models.creditModel;
 
-
 @WebServlet(name = "creditServlet", value = "/creditServlet")
 public class creditServlet extends HttpServlet {
     // Metier & Model

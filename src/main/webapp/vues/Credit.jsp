@@ -6,36 +6,46 @@
 <html>
 <head>
     <title>Title</title>
-    <link  rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+
 </head>
 <body>
-    <div>
-        <form method="post" action="creditServlet">
-            <table>
-                <tr>
-                    <td>Montant :</td>
-                    <td> <input type="text" name="montant" value="<%= model.getMontant()%>"></td>
-                    <td>DH</td>
-                </tr>
+  <div  class="container">
+      <div class="card border-primary">
+           <div class="card-header bg-primary text-white text-center">Semulation du credit </div>
+          <div class="card-body">
+              <form method="post" action="creditServlet">
 
-                <tr>
-                    <td>Duree :</td>
-                    <td> <input type="text" name="duree" value="<%= model.getDuree()%>"></td>
-                    <td>Mois</td>
-                </tr>
+                  <div class="form-group">
+                      <label class="form-label">Montant</label>
+                      <input class="form-control" type="text" name="montant" value="<%= model.getMontant()%>">
+                  </div>
+                  <div class="form-group">
 
-                <tr>
-                    <td>Taux :</td>
-                    <td> <input type="text" name="taux" value="<%= model.getTaux()%>"></td>
-                    <td>%</td>
-                </tr>
-            </table>
-            <button type="submit">calculer</button>
-        </form>
-    </div>
-     <div>
-         Mensualite : <%= model.getMensualite()%>
+                      <label class="form-label">Duree</label>
+                      <input class="form-control" type="text" name="duree" value="<%= model.getDuree()%>"%>
+                  </div>
 
-     </div>
+                  <div class="form-group">
+                      <label class="form-label">Taux</label>
+                      <input class="form-control" type="text" name="taux" value="<%= model.getTaux()%>" %>
+                  </div>
+
+                  <div  class="form-group mt-3">
+                      <BUTTON type="submit" class="btn btn-danger">Calculer</BUTTON>
+                  </div>
+
+              </form>
+
+              <div>
+                  <label>Mensualite </label>
+                  <label><%=model.getMensualite()%></label>
+              </div>
+          </div>
+
+
+      </div>
+  </div>
+
 </body>
 </html>
